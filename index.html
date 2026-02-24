@@ -5,93 +5,176 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Engagement Invitation</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
 <style>
 body {
-margin: 0;
-font-family: 'Georgia', serif;
-background: #ffffff;
-text-align: center;
-color: #444;
+    margin: 0;
+    background: #fdfaf6;
+    text-align: center;
+    color: #5a3e36;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
-.hero {
-padding: 120px 20px 60px 20px;
-background: linear-gradient(to bottom, #ffffff, #f7f7f7);
+/* Floating petals */
+.petal {
+    position: fixed;
+    top: -10px;
+    font-size: 20px;
+    animation: fall linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+.container {
+    padding: 60px 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.verse {
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
 h1 {
-font-size: 40px;
-letter-spacing: 3px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.subheading {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.invite-text {
+    max-width: 700px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 40px;
 }
 
 .names {
-font-size: 28px;
-margin-top: 20px;
-line-height: 1.6;
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    margin: 20px 0;
 }
 
 .details {
-background: #fafafa;
-margin: 40px auto;
-padding: 35px;
-border-radius: 15px;
-width: 90%;
-max-width: 500px;
-box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.details p {
+    margin: 15px 0;
 }
 
 .btn {
-display: inline-block;
-margin-top: 25px;
-padding: 12px 28px;
-background: #d4af37;
-color: white;
-text-decoration: none;
-border-radius: 30px;
-font-size: 16px;
-transition: 0.3s;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background: #b76e79;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
 }
 
 .btn:hover {
-background: #b8962e;
+    background: #9c5b63;
+    transform: scale(1.05);
+}
+
+.parents {
+    margin-top: 50px;
+    font-family: 'Playfair Display', serif;
 }
 
 .footer {
-margin-top: 60px;
-padding: 20px;
-font-size: 14px;
-color: #888;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero">
-<h1>Engagement Ceremony</h1>
-<div class="names">
-Dr. Prudhvi Raj <br> & <br> Manasa
+<!-- Floating Petals -->
+<script>
+for(let i=0;i<20;i++){
+    let petal = document.createElement("div");
+    petal.className="petal";
+    petal.innerHTML="🌸";
+    petal.style.left=Math.random()*100+"vw";
+    petal.style.animationDuration=(5+Math.random()*5)+"s";
+    petal.style.fontSize=(15+Math.random()*15)+"px";
+    document.body.appendChild(petal);
+}
+</script>
+
+<div class="container">
+
+<div class="verse">
+"Marriage is honourable among all." – Hebrews 13:4
 </div>
+
+<h1>Bandi's</h1>
+<div class="subheading">Engagement Invitation</div>
+
+<div class="invite-text">
+We cordially request the honour of your gracious presence  
+with family & friends to bless the couple on the auspicious occasion of the engagement of our beloved daughter
+</div>
+
+<div class="names">
+Manasa <br> with <br> Dr. Prudhvi Raj
 </div>
 
 <div class="details">
-<p><strong>Date:</strong> 14th March 2026</p>
-<p><strong>Time:</strong> 10:00 AM onwards</p>
+<p><strong>Date:</strong> Saturday, 14th March 2026</p>
+<p><strong>Time:</strong> 10:00 A.M. onwards</p>
 <p><strong>Venue:</strong><br>
 Kingston Park<br>
 Nallagandla Bypass Road,<br>
+Beside HP Petrol Pump,<br>
 Serilingampally, Hyderabad</p>
 
 <a class="btn"
 href="https://www.google.com/maps/search/?api=1&query=Kingston+Park+Nallagandla+Hyderabad"
 target="_blank">
-View on Google Maps
+View Location
 </a>
+
+<p>Lunch Follows...</p>
+</div>
+
+<div class="parents">
+Yours lovingly,<br><br>
+<strong>Sri Bandi Ramana Murthy</strong><br>
+<strong>Smt. Bandi Leela Kumari</strong>
 </div>
 
 <div class="footer">
-With the blessings of our parents ❤️ <br>
-Lunch follows
+With best compliments from Near & Dear ❤️
+</div>
+
 </div>
 
 </body>
