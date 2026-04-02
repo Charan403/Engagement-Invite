@@ -1,171 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Engagement Invitation</title>
+<title>Panga Wedding Invitation</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
 body {
     margin: 0;
+    font-family: 'Playfair Display', serif;
+    background: black;
+    color: white;
     text-align: center;
-    color: #4b2e2e;
-    font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
-    background-color: #fdfaf6;
+    overflow: hidden;
 }
 
-/* Floral Background */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
+.scene {
+    position: absolute;
     width: 100%;
-    height: 100%;
-    background: url('floral.png') no-repeat center;
-    background-size: cover;
-    opacity: 0.95;
-    z-index: -1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 1.5s ease;
 }
 
-.container {
-    padding: 80px 20px;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-.verse {
-    font-style: italic;
-    font-size: 14px;
-    margin-bottom: 20px;
+.active {
+    opacity: 1;
+    transform: scale(1);
 }
 
 h1 {
+    font-size: 50px;
+}
+
+.name {
     font-family: 'Great Vibes', cursive;
-    font-size: 52px;
-    margin: 10px 0;
+    font-size: 70px;
+    color: gold;
 }
 
-.subheading {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    margin-bottom: 30px;
-    letter-spacing: 2px;
-}
-
-.invite-text {
-    max-width: 750px;
-    margin: auto;
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 40px;
-}
-
-.names {
-    font-family: 'Great Vibes', cursive;
-    font-size: 46px;
-    margin: 25px 0;
-}
-
-.details {
-    background: rgba(255,255,255,0.95);
-    color: #5a3e36;
-    padding: 40px 30px;
-    border-radius: 20px;
-    max-width: 500px;
-    margin: auto;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-.details p {
-    margin: 15px 0;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 28px;
-    background: #b76e79;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #9c5b63;
-    transform: scale(1.05);
-}
-
-.parents {
-    margin-top: 50px;
-    font-family: 'Playfair Display', serif;
-}
-
-.footer {
-    margin-top: 40px;
-    font-size: 14px;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
+.small {
+    font-size: 25px;
+    margin-top: 10px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
-<div class="verse">
-"Marriage is honourable among all." – Hebrews 13:4
+<!-- Scene 1 -->
+<div class="scene active">
+    <h1>Panga’s Wedding Invitation</h1>
 </div>
 
-<h1>Bandi's</h1>
-<div class="subheading">Engagement Invitation</div>
-
-<div class="invite-text">
-We cordially request the honour of your gracious presence  
-with family & friends to bless the couple on the auspicious occasion  
-of the engagement of our beloved daughter
+<!-- Scene 2 -->
+<div class="scene">
+    <div class="name">Manasa</div>
+    <div class="small">with</div>
+    <div class="name">Dr. Prudhvi Raj</div>
 </div>
 
-<div class="names">
-Manasa <br> with <br> Dr. Prudhvi Raj
+<!-- Scene 3 -->
+<div class="scene">
+    <h1>15th April 2026</h1>
+    <div class="small">at 09:30 AM</div>
 </div>
 
-<div class="details">
-<p><strong>Date:</strong> Saturday, 14th March 2026</p>
-<p><strong>Time:</strong> 10:00 A.M. onwards</p>
-<p><strong>Venue:</strong><br>
-Kingston Park<br>
-Nallagandla Bypass Road,<br>
-Beside HP Petrol Pump,<br>
-Serilingampally, Hyderabad</p>
-
-<a class="btn"
-href="https://www.google.com/maps/search/?api=1&query=Kingston+Park+Nallagandla+Hyderabad"
-target="_blank">
-View Location
-</a>
-
-<p><strong>Lunch Follows...</strong></p>
+<!-- Scene 4 -->
+<div class="scene">
+    <h1>Meghana Conventions</h1>
+    <div class="small">Jammu Junction, Navasannapeta, Srikakulam</div>
 </div>
 
-<div class="parents">
-Yours lovingly,<br><br>
-<strong>Sri Bandi Ramana Murthy</strong><br>
-<strong>Smt. Bandi Leela Kumari</strong>
+<!-- Scene 5 -->
+<div class="scene">
+    <h1>Sri Bandi Ramana Murthy</h1>
+    <div class="small">&</div>
+    <h1>Smt. Bandi Leela Kumari</h1>
 </div>
 
-<div class="footer">
-With best compliments from Near & Dear ❤️
-</div>
+<script>
+let scenes = document.querySelectorAll(".scene");
+let index = 0;
 
-</div>
+function showNextScene() {
+    scenes[index].classList.remove("active");
+    index = (index + 1) % scenes.length;
+    scenes[index].classList.add("active");
+}
+
+setInterval(showNextScene, 3500);
+</script>
 
 </body>
 </html>
